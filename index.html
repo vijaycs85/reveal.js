@@ -1,221 +1,277 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+    <title>Drupal 8 - Our new wold</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+    <meta name="description" content="Presentation about the new features availabe  Drupal 8">
+    <meta name="author" content="Vijayachandran Mani">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
+<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-                    <img src="https://lh6.googleusercontent.com/6VKM_YW0ojSu76hkzhx8OmhKVd79tHbDHhD-IpoDVGmrcLJ1h5HeMg6ztrBfmqldaw=w1168-h475" style="border:none;box-shadow:none" />
-					<h1>Drupal 8</h1>
-					<h3>Our new world</h3>
-					<p>
-						<small>Presented by <a href="">Vijaya Chandran Mani</a> (<a href="http://drupal.org/user/93488">vijaycs85</a>)
-                         / Working at <a href="http://www.capgemini.com">Capgemini</a></small>
-					</p>
-                    <p>
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <img src="https://drupal.org/files/Drupal8Logo_0.png" style="border:none;box-shadow:none" />
+            <h1>Drupal 8</h1>
+            <h3>Our new world</h3>
+            <p>
+                <small>Presented by <a href="">Vijaya Chandran Mani</a> (<a href="http://drupal.org/user/93488">vijaycs85</a>)
+                    / Working at <a href="http://www.capgemini.com">Capgemini</a></small>
+            </p>
+            <p>
 
-                    </p>
+            </p>
 
-				</section>
+        </section>
 
-				<section>
-					<h2>Topics</h2>
-                    <ol>
-                        <li><p>New routing system.</p></li>
-                        <li><p>RIP to Variables & new born CMI.</p></li>
-                        <li><p>Configuration translation & schema.</p></li>
-                        <li><p>Get involve in core development NOW!!!</p></li>
-                    </ol>
+        <section>
+            <h2>Topics</h2>
+            <ol>
+                <li><p>New routing system.</p></li>
+                <li><p>Configuration systems</p></li>
+                <li><p>Web services</p></li>
+                <li><p>Fields, Views  & Panels</p></li>
+                <li><p>Mobile First</p></li>
+                <li><p>Drupal is NOT JUST Drupal</p></li>
+                <li><p>Get involve in core development NOW!!!</p></li>
+            </ol>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+            <aside class="notes">
+                Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+            </aside>
+        </section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>New routing system</h2>
-						<p></p>
-					</section>
-					<section>
-						<h2>hook_menu</h2>
-						<p>We (will) miss you :(</p>
+        <!-- Example of nested vertical slides -->
+        <section>
+            <section>
+                <h2>New routing system</h2>
+                <p></p>
+            </section>
+            <section>
+                <h2>hook_menu</h2>
+                <p>We (will) miss you :(</p>
 					<pre><code>
-   /**
-    * Implements hook_menu().
-    */
-    function user_menu() {
-      $items['admin/config/people/accounts'] = array(
-        'title' => 'Account settings',
-        'description' => 'Configure default behavior of users, including registration requirements, e-mails, and fields.',
-        'weight' => -10,
-        'route_name' => 'user.account_settings',
-      );
-      return $items;
-    }
+                        /**
+                        * Implements hook_menu().
+                        */
+                        function user_menu() {
+                        $items['admin/config/people/accounts'] = array(
+                        'title' => 'Account settings',
+                        'description' => 'Configure default behavior of users, including registration requirements, e-mails, and fields.',
+                        'weight' => -10,
+                        'route_name' => 'user.account_settings',
+                        );
+                        return $items;
+                        }
                     </code></pre>
-					</section>
-					<section>
-                        <h2>hook_menu part 2</h2>
+            </section>
+            <section>
+                <h2>hook_menu part 2</h2>
 					<pre><code>
-    // user.routing.yml
-    user.account_settings:
-      path: '/admin/config/people/accounts'
-      defaults:
-        _form: '\Drupal\user\AccountSettingsForm'
-      requirements:
-        _permission: 'administer account settings'
+                        // user.routing.yml
+                        user.account_settings:
+                        path: '/admin/config/people/accounts'
+                        defaults:
+                        _form: '\Drupal\user\AccountSettingsForm'
+                        requirements:
+                        _permission: 'administer account settings'
 
-                </code></pre>
-					</section>
-                <section>
-                    <h2>hook_menu part 3</h2>
-					<pre><code>
-  class AccountSettingsForm extends ConfigFormBase {
-    public function getFormId() {
-      return 'user_admin_settings';
-    }
-    public function buildForm(array $form, array &$form_state) {
-      $form['anonymous_settings'] = array(
-        '#type' => 'details',
-        '#title' => $this->t('Anonymous users'),
-      );
-    }
-    public function validatedForm(array $form, array &$form_state) {...}
-    public function submitForm(array $form, array &$form_state) {...}
-
-  }
                     </code></pre>
-                </section>
-				</section>
+            </section>
+            <section>
+                <h2>hook_menu part 3</h2>
+					<pre><code>
+                        class AccountSettingsForm extends ConfigFormBase {
+                        public function getFormId() {
+                        return 'user_admin_settings';
+                        }
+                        public function buildForm(array $form, array &$form_state) {
+                        $form['anonymous_settings'] = array(
+                        '#type' => 'details',
+                        '#title' => $this->t('Anonymous users'),
+                        );
+                        }
+                        public function validatedForm(array $form, array &$form_state) {...}
+                        public function submitForm(array $form, array &$form_state) {...}
 
-                <section>
-				<section>
-					<h2>R.I.P variables</h2>
-					<p>
-                        <img src="https://drupal.org/files/my_tombstone.jpg" />
-					</p>
-				</section>
-				<section>
-					<h2>Variables</h2>
-                    <ol>
-                        <li>config</li>
-                        <li>state</li>
-                        <li>settings</li>
-                    </ol>
+                        }
+                    </code></pre>
+            </section>
+        </section>
 
-				</section>
-                    <section>
-                        <h2>Config</h2>
-                        <p>Anything that need to be moved</p>
-                        <ol>
-                            <li>config('')->get()</li>
-                            <li>config('')->set()->save()</li>
-                            <li>config('')->del()</li>
-                        </ol>
+        <section>
+            <section>
+                <h2>Configuration system</h2>
+            </section>
+            <section>
+                <h2>No more Variables</h2>
+                <p>
+                    <img src="https://drupal.org/files/my_tombstone.jpg" />
+                </p>
+                <ol>
+                    <li>config</li>
+                    <li>state</li>
+                    <li>settings</li>
+                </ol>
 
-                    </section>
-                    <section>
-                        <h2>State</h2>
-                        <p>Anything that's specific to the installation</p>
-                    </section>
-                    <section>
-                        <h2>Settings</h2>
-                        <p>Anything that's specific to environment or non-configurable</p>
-                    </section>
-                </section>
-                <section>
-				<section>
-					<h2>Configuration translation & configuration schema</h2>
-					<p></p>
-				</section>
-                <section>
-                    <h2>title</h2>
-                    <p></p>
-                </section>
-                    <section>
-                        <h2>title</h2>
-                        <p></p>
-                    </section>
-                </section>
-				<section>
-					<h2>Reference Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Routing</a></li>
-                        <li><a href="http://slid.es">Variable</a></li>
-                        <li><a href="http://slid.es">Config translation</a></li>
-					</ul>
-				</section>
+            </section>
+            <section>
+                <h2>Config</h2>
+                <p>Anything that need to be moved</p>
+                <ol>
+                    <li>config('')->get()</li>
+                    <li>config('')->set()->save()</li>
+                    <li>config('')->del()</li>
+                </ol>
 
-				<section>
-					<h1>Questions?</h1>
-				</section>
+            </section>
+            <section>
+                <h2>State</h2>
+                <p>Anything that's specific to the installation</p>
+            </section>
+            <section>
+                <h2>Settings</h2>
+                <p>Anything that's specific to environment or non-configurable</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Web services</h2>
+                <p></p>
+            </section>
+            <section>
+                <h2>Build-in web services</h2>
+                <ul>
+                    <li><p>Expose content as JSON or XML.</p></li>
+                    <li><p>HTTP authentication.</p></li>
+                    <li><p>Expose Views-generated lists as services.</p></li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Fields, Views</h2>
+            </section>
+            <section>
+                <h2>Fields</h2>
+                <ul>
+                    <li><p>Fields are saved in config files.</p></li>
+                    <li><p>More field type in core: entity reference, link, date, e-mail, telephone, etc.</p></li>
+                    <li><p>Comments are now a field</p></li>
+                    <li><p>Add fields to blocks</p></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Views</h2>
+                <ul>
+                    <li><p>Views in core!!! (incl. VBO)</p></li>
+                    <li><p>All list in core are/will be views (front page, block list page, etc.)</p></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Views</h2>
+                <ul>
+                    <li><p>Views in core!!! (incl. VBO)</p></li>
+                    <li><p>All list in core are/will be views (front page, block list page, etc.)</p></li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Mobile Friendly</h2>
+            </section>
+            <section>
+                <h2>Mobile First</h2>
+                <ul>
+                    <li><p></p></li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Drupal is NOT JUST Drupal anymore!!!</h2>
+            </section>
+            <section>
+                <h2>New components from other frameworks.</h2>
+                <ul>
+                    <li class="fragment"><p>Symfony 2</p></li>
+                    <li class="fragment"><p>Twig</p></li>
+                    <li class="fragment"><p>PHPUnit</p></li>
+                    <li class="fragment"><p>Backbone and Underscore.js</p></li>
+                </ul>
+            </section>
+        </section>
 
-			</div>
+        <section>
+            <h2>Reference Links</h2>
+            <ul>
+                <li><a href="http://slid.es">Routing</a></li>
+                <li><a href="http://slid.es">Variable</a></li>
+                <li><a href="http://slid.es">Config translation</a></li>
+            </ul>
+        </section>
+        <section>
+            <h1>Questions?</h1>
+        </section>
 
-		</div>
+    </div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+</div>
 
-		<script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+<script>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-		</script>
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
 
-	</body>
+</script>
+
+</body>
 </html>
