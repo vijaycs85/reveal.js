@@ -56,7 +56,7 @@
                 <li><p>New routing system.</p></li>
                 <li><p>Configuration systems</p></li>
                 <li><p>Web services</p></li>
-                <li><p>Fields, Views  & Panels</p></li>
+                <li><p>Fields, Views</p></li>
                 <li><p>Mobile First</p></li>
                 <li><p>Drupal is NOT JUST Drupal</p></li>
                 <li><p>Get involve in core development NOW!!!</p></li>
@@ -93,35 +93,36 @@
             </section>
             <section>
                 <h2>hook_menu part 2</h2>
-					<pre><code>
-                        // user.routing.yml
-                        user.account_settings:
-                        path: '/admin/config/people/accounts'
-                        defaults:
-                        _form: '\Drupal\user\AccountSettingsForm'
-                        requirements:
-                        _permission: 'administer account settings'
+<pre><code>
+    // user.routing.yml
+    user.account_settings:
+    path: '/admin/config/people/accounts'
+    defaults:
+    _form: '\Drupal\user\AccountSettingsForm'
+    requirements:
+    _permission: 'administer account settings'
 
-                    </code></pre>
+</code></pre>
             </section>
             <section>
                 <h2>hook_menu part 3</h2>
-					<pre><code>
-                        class AccountSettingsForm extends ConfigFormBase {
-                        public function getFormId() {
-                        return 'user_admin_settings';
-                        }
-                        public function buildForm(array $form, array &$form_state) {
-                        $form['anonymous_settings'] = array(
-                        '#type' => 'details',
-                        '#title' => $this->t('Anonymous users'),
-                        );
-                        }
-                        public function validatedForm(array $form, array &$form_state) {...}
-                        public function submitForm(array $form, array &$form_state) {...}
+<pre><code>
+    class AccountSettingsForm extends ConfigFormBase {
 
-                        }
-                    </code></pre>
+      public function getFormId() {
+        return 'user_admin_settings';
+      }
+      public function buildForm(array $form, array &$form_state) {
+        $form['anonymous_settings'] = array(
+          '#type' => 'details',
+          '#title' => $this->t('Anonymous users'),
+        );
+      }
+      public function validatedForm(array $form, array &$form_state) {...}
+      public function submitForm(array $form, array &$form_state) {...}
+
+    }
+</code></pre>
             </section>
         </section>
 
@@ -194,13 +195,6 @@
                     <li><p>All list in core are/will be views (front page, block list page, etc.)</p></li>
                 </ul>
             </section>
-            <section>
-                <h2>Views</h2>
-                <ul>
-                    <li><p>Views in core!!! (incl. VBO)</p></li>
-                    <li><p>All list in core are/will be views (front page, block list page, etc.)</p></li>
-                </ul>
-            </section>
         </section>
         <section>
             <section>
@@ -209,7 +203,8 @@
             <section>
                 <h2>Mobile First</h2>
                 <ul>
-                    <li><p></p></li>
+                    <li><p>Responsive themes</p></li>
+                    <li><p>Mobile content administration</p></li>
                 </ul>
             </section>
         </section>
@@ -227,17 +222,33 @@
                 </ul>
             </section>
         </section>
-
         <section>
-            <h2>Reference Links</h2>
-            <ul>
-                <li><a href="http://slid.es">Routing</a></li>
-                <li><a href="http://slid.es">Variable</a></li>
-                <li><a href="http://slid.es">Config translation</a></li>
-            </ul>
+            <section>
+              <h2>Need your help NOW!!!</h2>
+            </section>
+            <section>
+                <h2>Why NOW?</h2>
+                <ul>
+                  <li class="fragment"><p>Unique opportunity</p></li>
+                  <li class="fragment"><p>Know why & why not (issue queue)</p></li>
+                  <li class="fragment"><p>Release date</p></li>
+                </ul>
+            </section>
+            <section>
+                <h2>Okay, where to start?</h2>
+                <ul>
+                    <li class="fragment"><p>Developer</p></li>
+                    <li class="fragment"><p>Tester/reviewer/user</p></li>
+                    <li class="fragment"><p>Organization</p></li>
+                    <li class="fragment"><p>Sprints/Meetups</p></li>
+                </ul>
+            </section>
         </section>
         <section>
             <h1>Questions?</h1>
+        </section>
+        <section>
+            <h1>Thank you!!!</h1>
         </section>
 
     </div>
